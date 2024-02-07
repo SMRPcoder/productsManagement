@@ -19,5 +19,18 @@ read this:-
   -for run in typescript use command "npm run dev" after installing modules.
   -postman collection data is added ,the filename is "collection.json" please use that and modifiy headers with authorization.
   -sql db backup is given , filename "postgresdb.sql" please use this file by using restore functionality in pgadmin.
-  
+
+product Attributes:-
+--------------------------------
+Given        |-In Database
+--------------------------------
+Product name |-productName
+             |
+Price        |-productRate
+             |
+Quantity     |-productQuantity
+             |
+Active       |-productAvailable
+---------------------------------
+
   
