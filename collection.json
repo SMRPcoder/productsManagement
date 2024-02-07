@@ -1,0 +1,238 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "product-management",
+    "dateExported": "2024-02-07T03:04:59.084Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "746b705e-0b27-4ba2-aa7e-31e1a16a950a",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3000/api/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-07T01:34:42.504Z",
+            "modified": "2024-02-07T01:45:51.686Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n  \"username\":\"raja@email.com\",\n  \"password\":\"123456789\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c23edbf3-594b-43c5-aac8-d5f4be082be1",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "register",
+            "url": "http://localhost:3000/api/auth/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-07T01:35:07.866Z",
+            "modified": "2024-02-07T01:35:35.417Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"user\",\n  \"username\":\"user@email.com\",\n  \"password\":\"123456789\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "977864d4-0fd4-4273-b9e6-7f5fa4f26783",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "admin - addProduct",
+            "url": "http://localhost:3000/api/admin/addProduct",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-07T01:36:28.056Z",
+            "modified": "2024-02-07T01:36:28.056Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI1Y2VmMDRlLWE5Y2QtNDg5MC04NGRjLTljYTdkNWY3ZWI2MSIsInVzZXJuYW1lIjoicmFqYUBlbWFpbC5jb20iLCJuYW1lIjoicmFqYSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzA3MjY2ODQ1fQ.eJMfbWP5_sbP2dg2LIabX2quvgkrt79850MGhVQxaLU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"productName\":\"laptop\",\n    \"productDetails\":\"latest gen i9 laptop for sale!!!\",\n    \"productRate\":\"10000\",\n    \"productAvailable\":true\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "dad33bf6-e6d6-42e4-b4cc-2c702a25549d",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "viewAllProducts",
+            "url": "http://localhost:3000/api/admin/viewAllProducts",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-02-07T01:37:52.456Z",
+            "modified": "2024-02-07T01:39:49.071Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhNTU1MWQ0LTllMGItNDk1NS05MDkxLTA5MmQ5ZDY1ZGZiYiIsInVzZXJuYW1lIjoiYWRtaW5AZW1haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA3MjY3MDA5fQ.mgioI495u5aEjkxK-7XrDeO7YY5MH5UHUvS03fjpipg"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8689abd7-0a00-4a6c-88b6-563189f15f60",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "editProduct",
+            "url": "http://localhost:3000/api/admin/editProduct",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-02-07T01:38:09.296Z",
+            "modified": "2024-02-07T01:38:09.296Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhNTU1MWQ0LTllMGItNDk1NS05MDkxLTA5MmQ5ZDY1ZGZiYiIsInVzZXJuYW1lIjoiYWRtaW5AZW1haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA3MjY3MDA5fQ.mgioI495u5aEjkxK-7XrDeO7YY5MH5UHUvS03fjpipg"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":\"fc5eb937-480c-4ea8-8324-7b59acbb80b1\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "89c3dfd6-c61d-469a-a70e-c48982fad5ac",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "changeAvailablity",
+            "url": "http://localhost:3000/api/admin/changeAvailability/fc5eb937-480c-4ea8-8324-7b59acbb80b1",
+            "method": "PATCH",
+            "sortNum": 70000,
+            "created": "2024-02-07T01:38:22.496Z",
+            "modified": "2024-02-07T01:40:55.973Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhNTU1MWQ0LTllMGItNDk1NS05MDkxLTA5MmQ5ZDY1ZGZiYiIsInVzZXJuYW1lIjoiYWRtaW5AZW1haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA3MjY3MDA5fQ.mgioI495u5aEjkxK-7XrDeO7YY5MH5UHUvS03fjpipg"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "17300e89-0cd0-4380-a2e6-f3980448c391",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "viewProduct",
+            "url": "http://localhost:3000/api/admin/viewProduct",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-02-07T01:38:37.528Z",
+            "modified": "2024-02-07T01:38:37.528Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhNTU1MWQ0LTllMGItNDk1NS05MDkxLTA5MmQ5ZDY1ZGZiYiIsInVzZXJuYW1lIjoiYWRtaW5AZW1haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA3MjY3MDA5fQ.mgioI495u5aEjkxK-7XrDeO7YY5MH5UHUvS03fjpipg"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":\"fc5eb937-480c-4ea8-8324-7b59acbb80b1\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "265fefaf-2281-4f6b-b3cc-369fe46726b2",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "viewAllUser",
+            "url": "http://localhost:3000/api/admin/viewAllUser",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-02-07T01:38:46.384Z",
+            "modified": "2024-02-07T01:38:46.384Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhNTU1MWQ0LTllMGItNDk1NS05MDkxLTA5MmQ5ZDY1ZGZiYiIsInVzZXJuYW1lIjoiYWRtaW5AZW1haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA3MjY3MDA5fQ.mgioI495u5aEjkxK-7XrDeO7YY5MH5UHUvS03fjpipg"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "726c3e09-4f7e-4d8d-8f32-8b1142a2036f",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "User-viewAllProducts",
+            "url": "http://localhost:3000/api/user/viewAllProducts",
+            "method": "GET",
+            "sortNum": 95000,
+            "created": "2024-02-07T01:45:10.329Z",
+            "modified": "2024-02-07T01:46:04.305Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI1Y2VmMDRlLWE5Y2QtNDg5MC04NGRjLTljYTdkNWY3ZWI2MSIsInVzZXJuYW1lIjoicmFqYUBlbWFpbC5jb20iLCJuYW1lIjoicmFqYSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzA3MjcwMzUxfQ.Ta9rkLt98IuBsvUGGf2wGW0b3Psefk0EUAPDNwwdHOo"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b31d9aa7-095c-409d-8c79-6495bc593fba",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "viewUser",
+            "url": "http://localhost:3000/api/admin/viewUser/b5cef04e-a9cd-4890-84dc-9ca7d5f7eb61",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-02-07T01:39:04.664Z",
+            "modified": "2024-02-07T01:39:04.664Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhNTU1MWQ0LTllMGItNDk1NS05MDkxLTA5MmQ5ZDY1ZGZiYiIsInVzZXJuYW1lIjoiYWRtaW5AZW1haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA3MjY3MDA5fQ.mgioI495u5aEjkxK-7XrDeO7YY5MH5UHUvS03fjpipg"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "74533728-4a54-41be-bd72-156b685fe8d0",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "User- viewProduct",
+            "url": "http://localhost:3000/api/user/viewProduct",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-02-07T01:45:13.625Z",
+            "modified": "2024-02-07T01:48:00.839Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI1Y2VmMDRlLWE5Y2QtNDg5MC04NGRjLTljYTdkNWY3ZWI2MSIsInVzZXJuYW1lIjoicmFqYUBlbWFpbC5jb20iLCJuYW1lIjoicmFqYSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzA3MjcwMzUxfQ.Ta9rkLt98IuBsvUGGf2wGW0b3Psefk0EUAPDNwwdHOo"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":\"f55ec32c-808b-4228-948c-d6e4178dfa6e\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
