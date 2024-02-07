@@ -21,9 +21,9 @@ read this:-
   -sql db backup is given , filename "postgresdb.sql" please use this file by using restore functionality in pgadmin.
 
 product Attributes:-
---------------------------------
+<-------------------------------->
 Given        |-In Database
---------------------------------
+<-------------------------------->
 Product name |-productName
              |
 Price        |-productRate
@@ -31,6 +31,6 @@ Price        |-productRate
 Quantity     |-productQuantity
              |
 Active       |-productAvailable
----------------------------------
+<--------------------------------->
 
   
