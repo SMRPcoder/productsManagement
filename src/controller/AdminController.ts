@@ -8,6 +8,9 @@ export const AddProduct = (req: Request, res: Response) => {
     try {
         const { value, error } = AddProductValidation.validate(req.body);
         if (!error) {
+            if(value.productQuantity<1){
+                value.productAvailable=false
+            }
             var newProduct = new Product(value);
             newProduct.save().then(() => {
                 res.status(200).json({ message: "Product Created successfully", status: true });
@@ -92,7 +95,7 @@ export const ViewAllUser = (req: Request, res: Response) => {
                 offset = (Number(page) * limit) - limit;
             }
         }
-        User.findAndCountAll({where:{role:"USER"}, limit, offset }).then(data => {
+        User.findAndCountAll({where:{role:"USER"}, limit, offset ,order: [['updatedAt', 'DESC']]}).then(data => {
             res.status(200).json({ data, status: true });
         }).catch(err => {
             console.log(err);

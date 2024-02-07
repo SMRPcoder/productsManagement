@@ -1,4 +1,4 @@
-import Joi from "joi";
+import Joi, { bool } from "joi";
 import jwt, { VerifyErrors } from "jsonwebtoken";
 
 
@@ -21,16 +21,18 @@ export const ViewSingleValidation:Joi.ObjectSchema=Joi.object({
 export const AddProductValidation:Joi.ObjectSchema=Joi.object({
     productName:Joi.string().required(),
     productDetails:Joi.string().optional().allow(""),
-    productRate:Joi.string().required(),
-    productAvailable:Joi.bool().required()
+    productRate:Joi.number().required(),
+    productAvailable:Joi.bool().optional(),
+    productQuantity:Joi.number().required()
 });
 
 export const EditProductValidation:Joi.ObjectSchema=Joi.object({
     id:Joi.string().required(),
     productName:Joi.string().optional(),
     productDetails:Joi.string().optional(),
-    productRate:Joi.string().optional()
-}).or("productName","productDetails","productRate");
+    productRate:Joi.number().optional(),
+    productQuantity:Joi.number().optional()
+}).or("productName","productDetails","productRate","productQuantity");
 
 
 // ========================================JWT functions========================================================//

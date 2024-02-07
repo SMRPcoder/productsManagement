@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "product-management",
-    "dateExported": "2024-02-07T03:04:59.084Z",
+    "dateExported": "2024-02-07T04:13:48.021Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-07T01:34:42.504Z",
-            "modified": "2024-02-07T01:45:51.686Z",
+            "modified": "2024-02-07T04:00:46.011Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \n  \"username\":\"raja@email.com\",\n  \"password\":\"123456789\"\n}",
+                "raw": "{\n  \n  \"username\":\"admin@email.com\",\n  \"password\":\"123456789\"\n}",
                 "form": []
             },
             "tests": []
@@ -49,20 +49,20 @@
             "containerId": "",
             "name": "admin - addProduct",
             "url": "http://localhost:3000/api/admin/addProduct",
-            "method": "GET",
+            "method": "POST",
             "sortNum": 30000,
             "created": "2024-02-07T01:36:28.056Z",
-            "modified": "2024-02-07T01:36:28.056Z",
+            "modified": "2024-02-07T04:07:20.874Z",
             "headers": [
                 {
                     "name": "Authorization",
-                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI1Y2VmMDRlLWE5Y2QtNDg5MC04NGRjLTljYTdkNWY3ZWI2MSIsInVzZXJuYW1lIjoicmFqYUBlbWFpbC5jb20iLCJuYW1lIjoicmFqYSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzA3MjY2ODQ1fQ.eJMfbWP5_sbP2dg2LIabX2quvgkrt79850MGhVQxaLU"
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhNTU1MWQ0LTllMGItNDk1NS05MDkxLTA5MmQ5ZDY1ZGZiYiIsInVzZXJuYW1lIjoiYWRtaW5AZW1haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA3Mjc4NDQ2fQ.Dj8TFN02sKF6YYnzmnQ8mzJS79LDqnAPrmYkF6jSfU8"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n   \"productName\":\"laptop\",\n    \"productDetails\":\"latest gen i9 laptop for sale!!!\",\n    \"productRate\":\"10000\",\n    \"productAvailable\":true\n}",
+                "raw": "{\n   \"productName\":\"Home Theatre\",\n    \"productDetails\":\"home theatre with effective 4 side speakers for sale!!\",\n    \"productRate\":1000,\n    \"productAvailable\":true,\n    \"productQuantity\":100\n}",
                 "form": []
             },
             "tests": []
@@ -232,6 +232,25 @@
                 "raw": "{\n  \"id\":\"f55ec32c-808b-4228-948c-d6e4178dfa6e\"\n}",
                 "form": []
             },
+            "tests": []
+        },
+        {
+            "_id": "a5a79bdd-1529-44ca-a532-a8395c5fe87a",
+            "colId": "26607edc-78af-4567-bf04-8eb5617a2a96",
+            "containerId": "",
+            "name": "User- buyProduct",
+            "url": "http://localhost:3000/api/user/buyProduct/8ee7014e-8172-42af-809d-aad07cf9e12b",
+            "method": "PATCH",
+            "sortNum": 120000,
+            "created": "2024-02-07T04:08:50.069Z",
+            "modified": "2024-02-07T04:09:42.310Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI1Y2VmMDRlLWE5Y2QtNDg5MC04NGRjLTljYTdkNWY3ZWI2MSIsInVzZXJuYW1lIjoicmFqYUBlbWFpbC5jb20iLCJuYW1lIjoicmFqYSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzA3MjcwMzUxfQ.Ta9rkLt98IuBsvUGGf2wGW0b3Psefk0EUAPDNwwdHOo"
+                }
+            ],
+            "params": [],
             "tests": []
         }
     ]

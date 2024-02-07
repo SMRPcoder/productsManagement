@@ -23,11 +23,16 @@ const Product = ProductModel.init({
     },
     productAvailable: {
         type: sequelize_1.DataTypes.BOOLEAN,
-        allowNull: false
+        allowNull: false,
+        defaultValue: true
     },
     productRate: {
-        type: sequelize_1.DataTypes.STRING,
+        type: sequelize_1.DataTypes.INTEGER,
         allowNull: false
-    }
+    },
+    productQuantity: {
+        type: sequelize_1.DataTypes.INTEGER,
+        allowNull: false
+    },
 }, { sequelize: db_1.default, modelName: "Product" });
 exports.default = Product;

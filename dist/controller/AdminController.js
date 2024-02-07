@@ -11,6 +11,9 @@ const AddProduct = (req, res) => {
     try {
         const { value, error } = functions_1.AddProductValidation.validate(req.body);
         if (!error) {
+            if (value.productQuantity < 1) {
+                value.productAvailable = false;
+            }
             var newProduct = new Product_1.default(value);
             newProduct.save().then(() => {
                 res.status(200).json({ message: "Product Created successfully", status: true });
@@ -96,7 +99,7 @@ const ViewAllUser = (req, res) => {
                 offset = (Number(page) * limit) - limit;
             }
         }
-        User_1.default.findAndCountAll({ where: { role: "USER" }, limit, offset }).then(data => {
+        User_1.default.findAndCountAll({ where: { role: "USER" }, limit, offset, order: [['updatedAt', 'DESC']] }).then(data => {
             res.status(200).json({ data, status: true });
         }).catch(err => {
             console.log(err);

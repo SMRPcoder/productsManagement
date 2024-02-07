@@ -22,15 +22,17 @@ exports.ViewSingleValidation = joi_1.default.object({
 exports.AddProductValidation = joi_1.default.object({
     productName: joi_1.default.string().required(),
     productDetails: joi_1.default.string().optional().allow(""),
-    productRate: joi_1.default.string().required(),
-    productAvailable: joi_1.default.bool().required()
+    productRate: joi_1.default.number().required(),
+    productAvailable: joi_1.default.bool().optional(),
+    productQuantity: joi_1.default.number().required()
 });
 exports.EditProductValidation = joi_1.default.object({
     id: joi_1.default.string().required(),
     productName: joi_1.default.string().optional(),
     productDetails: joi_1.default.string().optional(),
-    productRate: joi_1.default.string().optional()
-}).or("productName", "productDetails", "productRate");
+    productRate: joi_1.default.number().optional(),
+    productQuantity: joi_1.default.number().optional()
+}).or("productName", "productDetails", "productRate", "productQuantity");
 const createJwt = (user) => {
     const token = jsonwebtoken_1.default.sign(user, "kugefuewohfiaenfciPjia3465ygsux");
     return "Bearer " + token;

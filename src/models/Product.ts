@@ -7,6 +7,7 @@ interface ProductAttributes{
     productName:string;
     productDetails:string;
     productRate:string;
+    productQuantity:number;
     productAvailable:boolean;
     createdAt?:Date;
     updatedAt?:Date;
@@ -17,6 +18,7 @@ class ProductModel extends Model<ProductAttributes> implements ProductAttributes
     public productName!: string;
     public productDetails!: string;
     public productRate!: string;
+    public productQuantity!: number;
     public productAvailable!: boolean;
     public createdAt?: Date;
     public updatedAt?: Date;
@@ -38,12 +40,17 @@ const Product=ProductModel.init({
     },
     productAvailable:{
         type:DataTypes.BOOLEAN,
-        allowNull:false
+        allowNull:false,
+        defaultValue:true
     },
     productRate:{
-        type:DataTypes.STRING,
+        type:DataTypes.INTEGER,
         allowNull:false
-    }
+    },
+    productQuantity:{
+        type:DataTypes.INTEGER,
+        allowNull:false
+    },
 },{sequelize:db,modelName:"Product"});
 
 export default Product;
